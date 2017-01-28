@@ -1,0 +1,26 @@
+{
+  "name": "nodeexpress",
+  "version": "1.0.0",
+  "description": "this is a book test",
+  "main": "meadowlark.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaime-rey/nodeExpress.git"
+  },
+  "keywords": [
+    "node",
+    "express"
+  ],
+  "author": "jaime-rey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaime-rey/nodeExpress/issues"
+  },
+  "homepage": "https://github.com/jaime-rey/nodeExpress#readme",
+  "dependencies": {
+    "express": "^4.14.1"
+  }
+}
