@@ -2,6 +2,7 @@
  * Created by Jaime on 29/01/2017.
  */
 let express = require('express');
+let fortune = require('./lib/fortune.js');
 let app = express();
 
 let handlebars = require('express-handlebars').create({ defaultLayout:'main'});
@@ -12,9 +13,7 @@ app.use(express.static(__dirname + '/public'));
 app.set('port', process.env.PORT || 3000);
 
 app.get('/', (req, res) => {
-    var randomFortune =
-        fortunes[Math.floor(Math.random() * fortunes.length)];
-    res.render('home', { fortune: randomFortune} );
+    res.render('home', { fortune: fortune.getFortune() } );
 });
 app.get('/about', function(req, res) {
     res.render('about');
@@ -35,11 +34,3 @@ app.listen(app.get('port'), function(){
     console.log( 'Express started on http://localhost:' +
         app.get('port') + '; press Ctrl-C to terminate.' );
 });
-
-let fortunes = [
-    "Conquer your fears or they will conquer you.",
-    "Rivers need springs.",
-    "Do not fear what you don't know.",
-    "You will have a pleasant surprise.",
-    "Whenever possible, keep it simple.",
-];
