@@ -21,6 +21,11 @@
   },
   "homepage": "https://github.com/jaime-rey/nodeExpress#readme",
   "dependencies": {
-    "express": "^4.14.1"
+    "express": "^4.14.1",
+    "express-handlebars": "^3.0.0",
+    "express3-handlebars": "^0.5.2"
+  },
+  "devDependencies": {
+    "flow-bin": "^0.38.0"
   }
 }
